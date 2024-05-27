@@ -6,8 +6,9 @@ pipeline{
 
         agent{ docker { image 'node:14'}}
         steps{
+            sh 'sudo chown R 995:993 "/.nmp'
             sh 'npm install'
-        }
+         }
       }
 
     }
